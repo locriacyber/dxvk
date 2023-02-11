@@ -295,4 +295,6 @@ namespace dxvk {
     return D3D9TextureStageStateTypes(Type - 1);
   }
 
+  void TextureChangePrivate_(IDirect3DBaseTexture9*& dst, IDirect3DBaseTexture9* src);
+
 }

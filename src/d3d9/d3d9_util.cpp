@@ -1,4 +1,5 @@
 #include "d3d9_util.h"
+#include "d3d9_texture.h"
 
 #include "../util/util_win32_compat.h"
 
@@ -418,6 +419,10 @@ namespace dxvk {
         || Format == D3D9Format::DF16
         || Format == D3D9Format::DF24
         || Format == D3D9Format::INTZ;
+  }
+
+  void TextureChangePrivate_(IDirect3DBaseTexture9*& dst, IDirect3DBaseTexture9* src) {
+    TextureChangePrivate(dst, src);
   }
 
 }
